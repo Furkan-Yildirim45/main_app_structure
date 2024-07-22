@@ -1,5 +1,5 @@
 class AppSizes {
-  static late final AppSizes? _instance;
+  static AppSizes? _instance;
   static AppSizes get instance => _instance ?? AppSizes();
 
   double get kZero => 0;
@@ -7,6 +7,8 @@ class AppSizes {
   double get normalValue => 12;
   double get mediumValue => 16;
   double get largeValue => 20;
+  double get xLargeValue => 40;
+  double get xxLargeValue => 60;
   double get floatActionButtonSize => 60;
   double get middleButtonSize => 50;
 

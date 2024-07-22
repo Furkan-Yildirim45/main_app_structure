@@ -2,7 +2,7 @@ import 'package:flutter/material.dart' show BorderRadius;
 import 'package:main_app_structure/product/utils/app_utils/app_sizes.dart';
 
 class AppRadius {
-  static late final AppRadius? _instance;
+  static AppRadius? _instance;
   static AppRadius get instance => _instance ?? AppRadius();
 
   double get _valueSmall => AppSizes.instance.smallValue;

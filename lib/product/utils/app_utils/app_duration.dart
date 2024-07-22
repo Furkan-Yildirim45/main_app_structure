@@ -1,6 +1,6 @@
 
 class AppDuration {
-  static late final AppDuration? _instance;
+  static AppDuration? _instance;
   static AppDuration get instance => _instance ?? AppDuration();
 
   Duration get durationFast=> const Duration(milliseconds: 350);

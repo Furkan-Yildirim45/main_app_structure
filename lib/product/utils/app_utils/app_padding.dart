@@ -3,7 +3,7 @@ import 'package:main_app_structure/product/utils/app_utils/app_sizes.dart';
 
 class AppPadding {
 
-  static late final AppPadding? _instance;
+  static AppPadding? _instance;
   static AppPadding get instance => _instance ?? AppPadding();
 
   double get _valueSmall => AppSizes.instance.smallValue;

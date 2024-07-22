@@ -3,7 +3,7 @@ import 'package:flutter/material.dart' show SizedBox, Spacer;
 
 class AppSpaces {
 
-  static late AppSpaces? _instance;
+  static AppSpaces? _instance;
   static AppSpaces get instance => _instance ?? AppSpaces();
 
   get space => const Spacer(flex: 1);
