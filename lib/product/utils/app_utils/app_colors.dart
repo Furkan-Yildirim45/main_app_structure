@@ -5,11 +5,14 @@ enum AppColor {
   black,
   green,
   red,
+  yellow,
   grey,
   black12,
   white10,
   transparent,
   scaffoldBackgorundColor,
+  iconBackgroundColor,
+  softBackgroundColor,
 }
 
 extension AppColorExtension on AppColor {
@@ -33,6 +36,12 @@ extension AppColorExtension on AppColor {
         return Colors.transparent;
       case AppColor.scaffoldBackgorundColor:
         return const Color(0xFFFFFFFF);
+      case AppColor.iconBackgroundColor:
+        return const Color(0xffFFFFFF);
+      case AppColor.softBackgroundColor:
+        return const Color(0xffFFFFFF);
+      case AppColor.yellow:
+        return const Color(0xffFFFF00);
     }
   }
 }

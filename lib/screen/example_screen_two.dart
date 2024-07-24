@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:main_app_structure/controller/exapmle_screen_two.dart';
 import 'package:main_app_structure/model/demo_movie_model.dart';
-import 'package:main_app_structure/product/widgets/general_search_bar_widget.dart';
+import 'package:main_app_structure/product/widgets/general/general_search_bar_widget.dart';
 
 class ExapmleScreenTwo extends StatelessWidget {
   ExapmleScreenTwo({super.key});

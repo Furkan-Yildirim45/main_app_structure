@@ -1,7 +1,7 @@
 
 import 'package:dio/dio.dart';
 
-import '../../product/widgets/general_snack_bar.dart';
+import '../../product/widgets/general/general_snack_bar.dart';
 
 class GeneralService {
   final Dio _dio = Dio();
