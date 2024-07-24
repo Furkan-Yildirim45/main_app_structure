@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:main_app_structure/API/services/icon_and_image_services.dart';
+import 'package:main_app_structure/product/services/icon_and_image_services.dart';
 import 'package:main_app_structure/product/utils/app_utils/app_colors.dart';
 import 'package:main_app_structure/product/utils/app_utils/app_radius.dart';
 import 'package:main_app_structure/product/widgets/general/custom_elevated_button.dart';
