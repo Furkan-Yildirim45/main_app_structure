@@ -1,11 +1,12 @@
-
-
+import 'package:educhamp/product/utils/app_general.dart';
+import 'package:educhamp/product/utils/const_utils/app_colors.dart'
+    show AppColor, AppColorExtension;
+import 'package:educhamp/product/utils/const_utils/app_padding.dart'
+    show AppPadding;
+import 'package:educhamp/product/utils/const_utils/app_radius.dart'
+    show AppRadius;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:main_app_structure/product/utils/app_utils/app_colors.dart';
-import 'package:main_app_structure/product/utils/app_utils/app_general.dart';
-import 'package:main_app_structure/product/utils/app_utils/app_padding.dart';
-import 'package:main_app_structure/product/utils/app_utils/app_radius.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
@@ -15,7 +16,9 @@ class CustomTextField extends StatelessWidget {
     this.onSaved,
     required this.controller,
     this.isPhoneNumber = false,
-    this.onSubmit, this.color, this.focusNode,
+    this.onSubmit,
+    this.color,
+    this.focusNode,
   });
 
   final String hintText;
@@ -32,9 +35,9 @@ class CustomTextField extends StatelessWidget {
     return Container(
       margin: AppPadding.instance.topNormal,
       decoration: BoxDecoration(
-          color: color ?? AppColor.scaffoldBackgorundColor.getColor(),
-          borderRadius: AppRadius.instance.largeBorderRadius,
-          ),
+        color: color ?? AppColor.scaffoldBackgorundColor.getColor(),
+        borderRadius: AppRadius.instance.largeBorderRadius,
+      ),
       child: TextFormField(
         controller: controller,
         cursorColor: Colors.black,
@@ -45,16 +48,18 @@ class CustomTextField extends StatelessWidget {
             vertical: Get.height * 0.02,
             horizontal: Get.height * 0.03,
           ),
-          hintStyle: context.appGeneral.textTheme.labelLarge
-              ?.copyWith(color: AppColor.grey.getColor()),
+          hintStyle: context.appGeneral.textTheme.labelLarge?.copyWith(
+            color: AppColor.grey.getColor(),
+          ),
           errorStyle: const TextStyle(height: 0),
           counterText: '',
           counterStyle: const TextStyle(height: 0),
         ),
         maxLength: isPhoneNumber ?? false ? 10 : null,
-        keyboardType: isPhoneNumber ?? false
-            ? TextInputType.phone
-            : TextInputType.emailAddress,
+        keyboardType:
+            isPhoneNumber ?? false
+                ? TextInputType.phone
+                : TextInputType.emailAddress,
         maxLines: 1,
         validator: validator,
         onSaved: onSaved,
@@ -87,39 +92,44 @@ class CustomTextFieldForPassword extends StatelessWidget {
         return Container(
           margin: AppPadding.instance.topNormal,
           decoration: BoxDecoration(
-              color: AppColor.scaffoldBackgorundColor.getColor(),
-              borderRadius: AppRadius.instance.largeBorderRadius,
-              ),
-          child: Obx(() => TextFormField(
-                controller: controller,
-                cursorColor: Colors.black,
-                obscureText: customController.isObscure.value,
-                obscuringCharacter: "*",
-                decoration: InputDecoration(
-                  hintText: hintText,
-                  hintStyle: context.appGeneral.textTheme.labelLarge
-                      ?.copyWith(color: AppColor.grey.getColor()),
-                  border: InputBorder.none,
-                  contentPadding: EdgeInsets.symmetric(
-                    vertical: Get.height * 0.02,
-                    horizontal: Get.height * 0.02,
-                  ),
-                  errorStyle: const TextStyle(height: 0),
-                  suffixIcon: IconButton(
-                    icon: Icon(
-                        customController.isObscure.value
-                            ? Icons.visibility_off
-                            : Icons.visibility,
-                        color: customController.isObscure.value
-                            ? AppColor.softBackgroundColor.getColor()
-                            : AppColor.grey.getColor()),
-                    onPressed: customController.toggleObscure,
-                  ),
+            color: AppColor.scaffoldBackgorundColor.getColor(),
+            borderRadius: AppRadius.instance.largeBorderRadius,
+          ),
+          child: Obx(
+            () => TextFormField(
+              controller: controller,
+              cursorColor: Colors.black,
+              obscureText: customController.isObscure.value,
+              obscuringCharacter: "*",
+              decoration: InputDecoration(
+                hintText: hintText,
+                hintStyle: context.appGeneral.textTheme.labelLarge?.copyWith(
+                  color: AppColor.grey.getColor(),
                 ),
-                maxLines: 1,
-                validator: validator,
-                onSaved: onSaved,
-              )),
+                border: InputBorder.none,
+                contentPadding: EdgeInsets.symmetric(
+                  vertical: Get.height * 0.02,
+                  horizontal: Get.height * 0.02,
+                ),
+                errorStyle: const TextStyle(height: 0),
+                suffixIcon: IconButton(
+                  icon: Icon(
+                    customController.isObscure.value
+                        ? Icons.visibility_off
+                        : Icons.visibility,
+                    color:
+                        customController.isObscure.value
+                            ? AppColor.black.getColor()
+                            : AppColor.grey.getColor(),
+                  ),
+                  onPressed: customController.toggleObscure,
+                ),
+              ),
+              maxLines: 1,
+              validator: validator,
+              onSaved: onSaved,
+            ),
+          ),
         );
       },
     );

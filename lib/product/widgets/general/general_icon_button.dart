@@ -1,10 +1,10 @@
 
+import 'package:educhamp/product/services/icon_and_image_services.dart' show AppIconUtility;
+import 'package:educhamp/product/utils/const_utils/app_colors.dart' show AppColor, AppColorExtension;
+import 'package:educhamp/product/utils/const_utils/app_radius.dart' show AppRadius;
+import 'package:educhamp/product/widgets/general/custom_elevated_button.dart' show CustomElevatedButton;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:main_app_structure/product/services/icon_and_image_services.dart';
-import 'package:main_app_structure/product/utils/app_utils/app_colors.dart';
-import 'package:main_app_structure/product/utils/app_utils/app_radius.dart';
-import 'package:main_app_structure/product/widgets/general/custom_elevated_button.dart';
 
 class GeneralIconButton extends StatelessWidget {
   const GeneralIconButton({
@@ -21,7 +21,7 @@ class GeneralIconButton extends StatelessWidget {
     return CustomElevatedButton(
       width: Get.height * 0.07,
       height: Get.height * 0.07,
-      backgroundColor: AppColor.iconBackgroundColor.getColor(),
+      backgroundColor: AppColor.black.getColor(),
       shape: RoundedRectangleBorder(
         borderRadius: AppRadius.instance.normalBorderRadius,
       ),
@@ -29,7 +29,7 @@ class GeneralIconButton extends StatelessWidget {
       elevation: 0,
       child: Image.asset(
         AppIconUtility.getIconPath(icon),
-        color: AppColor.softBackgroundColor.getColor(),
+        color: AppColor.black.getColor(),
       ),
     );
   }

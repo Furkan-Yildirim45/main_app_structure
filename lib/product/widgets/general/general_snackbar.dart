@@ -1,6 +1,6 @@
+import 'package:educhamp/product/utils/const_utils/app_colors.dart' show AppColor, AppColorExtension;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:main_app_structure/product/utils/app_utils/app_colors.dart';
 
 class GeneralSnackbar {
   static void show({

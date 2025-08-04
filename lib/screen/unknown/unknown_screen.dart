@@ -1,6 +1,6 @@
 
+import 'package:educhamp/product/utils/app_general.dart';
 import 'package:flutter/material.dart';
-import 'package:main_app_structure/product/utils/app_utils/app_general.dart';
 
 class UnknownScreen extends StatelessWidget {
   const UnknownScreen({super.key});

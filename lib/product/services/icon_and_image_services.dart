@@ -1,4 +1,4 @@
-enum ImageFormat { png, jpg, jpeg }
+enum ImageFormat { png, jpg, jpeg,svg}
 
 class AppImageUtility {
   static String getImagePath(String imageName, {ImageFormat format = ImageFormat.png}) {
@@ -10,6 +10,9 @@ class AppImageUtility {
       case ImageFormat.jpeg:
         extension = 'jpeg';
         break;
+      case ImageFormat.svg:
+        extension = "svg";
+        break;
       default:
         extension = 'png';
     }
@@ -17,7 +20,7 @@ class AppImageUtility {
   }
 }
 
-enum IconFormat { png }
+enum IconFormat { png , svg }
 
 class AppIconUtility {
   static String getIconPath(String imageName, {IconFormat format = IconFormat.png}) {
@@ -26,10 +29,10 @@ class AppIconUtility {
       case IconFormat.png:
         extension = 'png';
         break;
-      // Diğer formatlar eklenebilir, ancak genelde ikonlar PNG formatını destekler
-      default:
-        extension = 'png';
-    }
+      case IconFormat.svg:
+        extension = "svg";
+        break;
+      }
     return 'assets/icons/$imageName.$extension';
   }
 }

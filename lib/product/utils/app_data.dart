@@ -1,6 +1,6 @@
+import 'package:educhamp/API/api_base.dart' show ApiBase;
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
-import 'package:main_app_structure/API/api_base.dart';
+import 'package:get_storage/get_storage.dart' show GetStorage;
 
 class AppData {
   static late final GetStorage box;

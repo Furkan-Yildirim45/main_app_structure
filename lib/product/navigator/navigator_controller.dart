@@ -1,8 +1,8 @@
 
 
+import 'package:educhamp/product/navigator/navigate_route_items.dart' show NavigateRoutesItems, NavigateRoutesItemsExtension;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:main_app_structure/product/navigator/navigate_route_items.dart';
 
 class NavigatorController extends GetxController{
   NavigatorController._();

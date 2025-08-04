@@ -1,4 +1,4 @@
-import 'package:dio/dio.dart';
+import 'package:dio/dio.dart' show BaseOptions, Dio;
 import 'package:get_storage/get_storage.dart';
 
 class ApiBase {

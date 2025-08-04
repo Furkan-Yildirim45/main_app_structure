@@ -1,11 +1,11 @@
 
+import 'package:educhamp/product/controller/general_searchbar_widget_controller.dart' show CustomSearchBarController;
+import 'package:educhamp/product/utils/app_general.dart';
+import 'package:educhamp/product/utils/const_utils/app_colors.dart' show AppColor, AppColorExtension;
+import 'package:educhamp/product/utils/const_utils/app_padding.dart' show AppPadding;
+import 'package:educhamp/product/utils/const_utils/app_sizes.dart' show AppSizes;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:main_app_structure/product/controller/general_searchbar_widget_controller.dart';
-import 'package:main_app_structure/product/utils/app_utils/app_colors.dart';
-import 'package:main_app_structure/product/utils/app_utils/app_general.dart';
-import 'package:main_app_structure/product/utils/app_utils/app_padding.dart';
-import 'package:main_app_structure/product/utils/app_utils/app_sizes.dart';
 
 class CustomGeneralSearchBar<T> extends StatelessWidget {
   const CustomGeneralSearchBar({

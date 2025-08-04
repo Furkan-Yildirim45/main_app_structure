@@ -1,5 +1,6 @@
 
-import 'package:main_app_structure/product/widgets/general/general_snackbar.dart';
+
+import 'package:educhamp/product/widgets/general/general_snackbar.dart' show GeneralSnackbar;
 
 class ValidatorService {
   static String? validateName(String? value) {
